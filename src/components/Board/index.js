@@ -26,12 +26,16 @@ const Board = () => {
             const URL = canvas.toDataURL()
             const anchor = document.createElement('a')
             anchor.href = URL
-            anchor.download = a.TIME+'.jpg'
-            //anchor.download = 'sketch.jpg'
+            anchor.download = 'creatiketch-'+a.TIME+'.jpg'
             anchor.click()
-        } else  if (actionMenuItem === MENU_ITEMS.UNDO || actionMenuItem === MENU_ITEMS.REDO) {
-            if(historyPointer.current > 0 && actionMenuItem === MENU_ITEMS.UNDO) historyPointer.current -= 1
-            if(historyPointer.current < drawHistory.current.length - 1 && actionMenuItem === MENU_ITEMS.REDO) historyPointer.current += 1
+        } 
+        else  if (actionMenuItem === MENU_ITEMS.UNDO) {
+            if(historyPointer.current > 0) historyPointer.current -= 1
+            const imageData = drawHistory.current[historyPointer.current]
+            context.putImageData(imageData, 0, 0)
+        }
+        else  if (actionMenuItem === MENU_ITEMS.REDO) {
+            if(historyPointer.current < drawHistory.current.length - 1) historyPointer.current += 1
             const imageData = drawHistory.current[historyPointer.current]
             context.putImageData(imageData, 0, 0)
         }
