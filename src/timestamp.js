@@ -1,13 +1,13 @@
-var timestamp = Date.now();
-var dateObject = new Date(timestamp);
-var date = dateObject.getDate();
-var month = dateObject.getMonth();
-var year = dateObject.getFullYear();
-var hour = dateObject.getHours();
-var minute = dateObject.getMinutes();
-var second = dateObject.getSeconds();
-var time = date+""+month+""+year+""+hour+""+minute+""+second;
-var a = {
+const timestamp = Date.now();
+const dateObject = new Date(timestamp);
+const date = dateObject.getDate();
+const month = dateObject.getMonth();
+const year = dateObject.getFullYear();
+const hour = dateObject.getHours();
+const minute = dateObject.getMinutes();
+const second = dateObject.getSeconds();
+const time = date+""+month+""+year+""+hour+""+minute+""+second;
+const a = {
     TIME: time
 }
 export {a}
