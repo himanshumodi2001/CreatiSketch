@@ -7,13 +7,13 @@ var minute = d.getMinutes();
 var second = d.getSeconds();
 
 if(hour < 10){
-    hour = "0" + hours;   
+    hour = "0" + hour;   
 }
 if(minute < 10){
-    minute = "0" + minutes;   
+    minute = "0" + minute;   
 }
 if(second < 10){
-    second = "0" + seconds;   
+    second = "0" + second;   
 }
 
 var time = date+""+month+""+year+""+hour+""+minute+""+second;
