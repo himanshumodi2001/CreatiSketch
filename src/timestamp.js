@@ -8,7 +8,7 @@ var second = d.getSeconds();
 
 if(hour < 10){
     hour = "0" + hours;   
-    }
+}
 if(minute < 10){
     minute = "0" + minutes;   
 }
