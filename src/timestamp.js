@@ -16,6 +16,13 @@ if(second < 10){
     second = "0" + second;   
 }
 
+if(date < 10){
+    date = "0" + date;   
+}
+if(month < 10){
+    month = "0" + month;   
+}
+
 var time = date+""+month+""+year+""+hour+""+minute+""+second;
 var a = {
     TIME: time
